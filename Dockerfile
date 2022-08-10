@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-ARG TERRAFORM_VERSION
+ARG TERRAFORM_VERSION=0.14.0
 #ENV TERRAFORM_VERSION=0.14.0
 COPY scripts/terraform.sh .
 COPY scripts/git.sh .
