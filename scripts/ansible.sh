@@ -1,4 +1,4 @@
-apt-get update && \
+DEBIAN_FRONTEND=noninteractive apt-get update && \
 apt-get install -y gnupg2 python3-pip sshpass git openssh-client && \
 rm -rf /var/lib/apt/lists/* && \
 apt-get clean
