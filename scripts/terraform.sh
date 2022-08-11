@@ -6,7 +6,6 @@ apt-get install wget -y && \
 # vim
 apt-get install vim -y
 # Download terraform for linux
-VOLUME /data
 wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
 # Unzip
