@@ -7,7 +7,7 @@ COPY scripts/git.sh .
 COPY scripts/packer.sh .
 COPY scripts/ansible.sh .
 RUN ./terraform.sh
-RUN ./git.sh
-RUN ./packer.sh
-RUN ./ansible.sh
+#RUN ./git.sh
+#RUN ./packer.sh
+#RUN ./ansible.sh
 CMD ["sleep", "infinity"]
