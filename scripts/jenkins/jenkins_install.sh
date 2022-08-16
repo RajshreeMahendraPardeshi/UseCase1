@@ -12,7 +12,7 @@ apt-get install -y jenkins
 java -jar jenkins-plugin-manager-2.10.0.jar --war  /usr/share/java/jenkins.war --plugin-file /usr/share/jenkins/ref/plugins.txt  --plugin-download-directory /var/jenkins_home/plugins --verbose
 
 java  -Djenkins.install.runSetupWizard=false  -jar /usr/share/java/jenkins.war  &
-sleep 50
+sleep 20
 
 
 
