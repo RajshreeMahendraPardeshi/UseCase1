@@ -23,14 +23,15 @@ COPY scripts/git.sh .
 COPY scripts/packer.sh .
 COPY scripts/ansible.sh .
 
-COPY scripts/jenkins/*  /usr/share/jenkins/ref/
-COPY scripts/jenkins/init.groovy/* /usr/share/jenkins/ref/
-CMD ./usr/share/jenkins/ref/jenkins_install.sh
 
-EXPOSE 8080
 
 RUN ./terraform.sh
 RUN ./git.sh
 RUN ./packer.sh
 RUN ./ansible.sh
-CMD ["sleep", "infinity"]
+
+COPY scripts/jenkins/*  /usr/share/jenkins/ref/
+COPY scripts/jenkins/init.groovy/* /usr/share/jenkins/ref/
+CMD ./usr/share/jenkins/ref/jenkins_install.sh
+
+EXPOSE 8080
