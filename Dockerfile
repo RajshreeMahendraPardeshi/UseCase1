@@ -29,9 +29,9 @@ RUN ./terraform.sh
 RUN ./git.sh
 RUN ./packer.sh
 RUN ./ansible.sh
-
+RUN mkdir -p /usr/share/jenkins/ref/init.groovy.d
 COPY scripts/jenkins/*  /usr/share/jenkins/ref/
-COPY scripts/jenkins/init.groovy/* /usr/share/jenkins/ref/
+COPY scripts/jenkins/init.groovy/* /usr/share/jenkins/ref/init.groovy.d/
 CMD ./usr/share/jenkins/ref/jenkins_install.sh
 
 EXPOSE 8080
