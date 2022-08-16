@@ -19,5 +19,5 @@ sleep 50
 wget http://localhost:8080/jnlpJars/jenkins-cli.jar
 sleep 10
 
-java -jar jenkins-cli.jar -s http://localhost:8080 create-job Terraform_Template_Job15 < /usr/share/jenkins/ref/Terraform_Template_Job.xml
+java -jar jenkins-cli.jar -s http://localhost:8080 create-job Terraform_Template_Job1 < /usr/share/jenkins/ref/Terraform_Template_Job.xml
 sleep "infinity"
