@@ -1,7 +1,7 @@
 
 resource "aws_instance" "jump_box" {
   ami           = "ami-090fa75af13c156b4"
-  instance_type = "${var.instance_type}"
+  instance_type = var.instance_type
   key_name      = "iac_key"
 
   subnet_id              = aws_subnet.pub_sub.id
@@ -14,7 +14,7 @@ resource "aws_instance" "jump_box" {
 
 resource "aws_instance" "app_instance" {
   ami           = "ami-090fa75af13c156b4"
-  instance_type = "${var.instance_type}"
+  instance_type = var.instance_type
   key_name      = "iac_key"
 
   subnet_id              = aws_subnet.prv_sub.id
