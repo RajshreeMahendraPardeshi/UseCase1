@@ -1,13 +1,13 @@
 # Creating External LoadBalancer
 resource "aws_lb" "external-alb" {
-  name               = "External LB"
+  name               = "ExternalLB"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.app_sg.id]
   subnets            = [aws_subnet.web_sub.id]
 }
 resource "aws_lb_target_group" "target-elb" {
-  name     = "ALB TG"
+  name     = "ALBTG"
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.terraform_vpc.id
