@@ -103,7 +103,7 @@ resource "aws_security_group_rule" "in_ssh_app_from_bastion" {
 
 #Security group for DB
 
-resource "aws_security_group" "database-sg" {
+resource "aws_security_group" "db_sg" {
   name        = "Database SG"
   description = "Allow inbound traffic from application layer"
   vpc_id      = aws_vpc.terraform_vpc.id
@@ -121,6 +121,6 @@ egress {
   cidr_blocks = ["0.0.0.0/0"]
 }
 tags = {
-  Name = "Database SG"
+  Project = "IAC"
 }
 }
