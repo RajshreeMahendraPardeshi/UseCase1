@@ -20,7 +20,7 @@ resource "aws_security_group" "app_sg" {
   description = "SSH ingress from Bastion and all TCP traffic ingress from ALB Security Group"
   vpc_id      = aws_vpc.terraform_vpc.id
   tags = {
-    Project = "IAC
+    Project = "IAC"
   }
 }
 
