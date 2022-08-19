@@ -30,12 +30,12 @@ resource "aws_route_table" "prv_rt" {
   }
 }
 
-resource "aws_route_table_association" "prv_rt_assoc" {
+resource "aws_route_table_association" "prv_rt_assoc1" {
   subnet_id      = aws_subnet.app_sub.id
   route_table_id = aws_route_table.prv_rt.id
 }
 
-resource "aws_route_table_association" "prv_rt_assoc" {
+resource "aws_route_table_association" "prv_rt_assoc2" {
   subnet_id      = aws_subnet.db_sub.id
   route_table_id = aws_route_table.prv_rt.id
 }
