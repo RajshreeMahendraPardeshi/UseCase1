@@ -4,7 +4,7 @@ resource "aws_lb" "external-alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.app_sg.id]
-  subnets            = [aws_subnet.pub_subnet.id]
+  subnets            = [aws_subnet.pub_sub.id]
 }
 resource "aws_lb_target_group" "target-elb" {
   name     = "ALB TG"
