@@ -13,7 +13,7 @@ resource "aws_lb_target_group" "target-alb" {
   vpc_id   = aws_vpc.terraform_vpc.id
 }
 resource "aws_lb_target_group_attachment" "attachment" {
-  target_group_arn = aws_lb_target_group.external-alb.arn
+  target_group_arn = aws_lb_target_group.target-alb.arn
   target_id        = aws_instance.appserver.id
   port             = 80
 depends_on = [
