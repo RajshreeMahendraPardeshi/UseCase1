@@ -6,7 +6,7 @@ resource "aws_lb" "external-alb" {
   security_groups    = [aws_security_group.app_sg.id]
   subnets            = [aws_subnet.web_sub.id]
 }
-resource "aws_lb_target_group" "target-elb" {
+resource "aws_lb_target_group" "target-alb" {
   name     = "ALBTG"
   port     = 80
   protocol = "HTTP"
